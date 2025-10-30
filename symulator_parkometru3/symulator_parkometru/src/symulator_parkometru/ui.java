@@ -95,6 +95,7 @@ public class ui extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(740, 864));
         setResizable(false);
 
+        jPanel1.setToolTipText("");
         jPanel1.setMaximumSize(new java.awt.Dimension(740, 864));
         jPanel1.setMinimumSize(new java.awt.Dimension(740, 864));
         jPanel1.setLayout(null);
@@ -112,7 +113,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(130, 640, 40, 40);
+        jButton2.setBounds(120, 640, 40, 40);
 
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,7 +129,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(220, 640, 40, 40);
+        jButton4.setBounds(210, 640, 40, 40);
 
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +145,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(310, 640, 40, 40);
+        jButton6.setBounds(300, 640, 40, 40);
 
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +161,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton8);
-        jButton8.setBounds(400, 640, 40, 40);
+        jButton8.setBounds(390, 640, 40, 40);
 
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,7 +177,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton10);
-        jButton10.setBounds(490, 640, 40, 40);
+        jButton10.setBounds(480, 640, 40, 40);
 
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,7 +193,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton12);
-        jButton12.setBounds(80, 690, 40, 40);
+        jButton12.setBounds(80, 680, 40, 40);
 
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,7 +201,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton13);
-        jButton13.setBounds(130, 690, 40, 40);
+        jButton13.setBounds(120, 680, 40, 40);
 
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,7 +209,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton14);
-        jButton14.setBounds(170, 690, 40, 40);
+        jButton14.setBounds(170, 680, 40, 40);
 
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,7 +217,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton15);
-        jButton15.setBounds(220, 690, 40, 40);
+        jButton15.setBounds(210, 680, 40, 40);
 
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,7 +225,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton16);
-        jButton16.setBounds(260, 690, 40, 40);
+        jButton16.setBounds(260, 680, 40, 40);
 
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,7 +233,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton17);
-        jButton17.setBounds(310, 690, 40, 40);
+        jButton17.setBounds(300, 680, 40, 40);
 
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,7 +241,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton18);
-        jButton18.setBounds(350, 690, 40, 40);
+        jButton18.setBounds(350, 680, 40, 40);
 
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,7 +249,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton19);
-        jButton19.setBounds(400, 690, 40, 40);
+        jButton19.setBounds(390, 680, 40, 40);
 
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,7 +257,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton20);
-        jButton20.setBounds(440, 690, 40, 40);
+        jButton20.setBounds(440, 680, 40, 40);
 
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -264,7 +265,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton21);
-        jButton21.setBounds(490, 690, 40, 40);
+        jButton21.setBounds(480, 680, 40, 40);
 
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,7 +273,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton22);
-        jButton22.setBounds(530, 690, 40, 40);
+        jButton22.setBounds(530, 680, 40, 40);
 
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -280,7 +281,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton23);
-        jButton23.setBounds(580, 690, 40, 40);
+        jButton23.setBounds(570, 680, 40, 40);
 
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,7 +289,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton24);
-        jButton24.setBounds(620, 690, 40, 40);
+        jButton24.setBounds(610, 680, 40, 40);
 
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -296,7 +297,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton25);
-        jButton25.setBounds(80, 730, 40, 40);
+        jButton25.setBounds(70, 730, 40, 40);
 
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -304,7 +305,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton26);
-        jButton26.setBounds(130, 730, 40, 40);
+        jButton26.setBounds(120, 730, 40, 40);
 
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -320,7 +321,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton28);
-        jButton28.setBounds(220, 730, 40, 40);
+        jButton28.setBounds(210, 730, 40, 40);
 
         jButton29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -336,7 +337,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton30);
-        jButton30.setBounds(310, 730, 40, 40);
+        jButton30.setBounds(300, 730, 40, 40);
 
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -352,7 +353,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton32);
-        jButton32.setBounds(400, 730, 40, 40);
+        jButton32.setBounds(390, 730, 40, 40);
 
         jButton33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -368,7 +369,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton34);
-        jButton34.setBounds(490, 730, 40, 40);
+        jButton34.setBounds(480, 730, 40, 40);
 
         jButton35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -400,7 +401,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton38);
-        jButton38.setBounds(120, 780, 40, 40);
+        jButton38.setBounds(120, 770, 40, 40);
 
         jButton39.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -408,7 +409,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton39);
-        jButton39.setBounds(170, 780, 40, 40);
+        jButton39.setBounds(170, 770, 40, 40);
 
         jButton40.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -416,7 +417,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton40);
-        jButton40.setBounds(220, 780, 40, 40);
+        jButton40.setBounds(210, 770, 40, 40);
 
         jButton41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -424,7 +425,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton41);
-        jButton41.setBounds(260, 780, 40, 40);
+        jButton41.setBounds(260, 770, 40, 40);
 
         jButton42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -432,7 +433,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton42);
-        jButton42.setBounds(310, 780, 40, 40);
+        jButton42.setBounds(300, 770, 40, 40);
 
         jButton43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -440,7 +441,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton43);
-        jButton43.setBounds(350, 780, 40, 40);
+        jButton43.setBounds(350, 770, 40, 40);
 
         jButton44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -448,7 +449,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton44);
-        jButton44.setBounds(400, 780, 80, 40);
+        jButton44.setBounds(390, 770, 80, 40);
 
         jButton45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -456,7 +457,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton45);
-        jButton45.setBounds(490, 780, 40, 40);
+        jButton45.setBounds(480, 770, 40, 40);
 
         jButton46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -464,7 +465,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton46);
-        jButton46.setBounds(530, 780, 40, 40);
+        jButton46.setBounds(530, 770, 40, 40);
 
         jButton47.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -472,7 +473,7 @@ public class ui extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton47);
-        jButton47.setBounds(580, 780, 40, 40);
+        jButton47.setBounds(570, 770, 40, 40);
 
         jTextField1.setBackground(new java.awt.Color(46, 75, 141));
         jTextField1.setText("      PARKOMAT");
@@ -494,9 +495,9 @@ public class ui extends javax.swing.JFrame {
         jPanel1.add(jTextField2);
         jTextField2.setBounds(430, 400, 200, 70);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\5kt\\img\\parkomat.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/symulator_parkometru/icon.jpg"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 740, 860);
+        jLabel1.setBounds(0, 0, 726, 860);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
