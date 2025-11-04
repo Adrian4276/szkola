@@ -3,6 +3,10 @@ package symulator_parkometru;
 import java.awt.Component;
 import java.awt.Container;
 import javax.swing.JButton;
+import javax.swing.ImageIcon;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.Timer;
 
 
 /**
@@ -11,27 +15,40 @@ import javax.swing.JButton;
  */
 public class ui extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ui
-     */
     public ui() {
         initComponents();
-            makeAllButtonsTransparent(this.getContentPane());
-}
-    
+
+        jLabel1.setIcon(new ImageIcon(getClass().getResource("/symulator_parkometru/icon.jpg")));
+        makeAllButtonsTransparent(this.getContentPane());
+        aktualizujDateICzas();
+    }
+
     private void makeAllButtonsTransparent(Container container) {
-    for (Component c : container.getComponents()) {
-        if (c instanceof JButton) {
-            JButton button = (JButton) c;
-            button.setOpaque(false);
-            button.setContentAreaFilled(false);
-            button.setBorderPainted(false);
-            button.setFocusPainted(false);
-        } else if (c instanceof Container) {
-            makeAllButtonsTransparent((Container) c); // rekurencja dla paneli w panelach
+        for (Component c : container.getComponents()) {
+            if (c instanceof JButton) {
+                JButton button = (JButton) c;
+                button.setOpaque(false);
+                button.setContentAreaFilled(false);
+                button.setBorderPainted(false);
+                button.setFocusPainted(false);
+            } else if (c instanceof Container) {
+                makeAllButtonsTransparent((Container) c);
+            }
         }
     }
+    
+    private void aktualizujDateICzas() {
+    SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+
+    // Timer aktualizujący co 1 sekundę
+    Timer timer = new Timer(1000, e -> {
+        String dataICzas = sdf.format(new Date());
+        jTextArea1.setText(dataICzas);
+    });
+    timer.start();
 }
+
+
 
 
     @SuppressWarnings("unchecked")
