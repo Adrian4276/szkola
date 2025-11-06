@@ -15,13 +15,14 @@ import javax.swing.Timer;
  */
 public class ui extends javax.swing.JFrame {
 
-    public ui() {
-        initComponents();
+public ui() {
+    initComponents();
 
-        jLabel1.setIcon(new ImageIcon(getClass().getResource("/symulator_parkometru/icon.jpg")));
-        makeAllButtonsTransparent(this.getContentPane());
-        aktualizujDateICzas();
-    }
+    jLabel1.setIcon(new ImageIcon(getClass().getResource("/symulator_parkometru/icon.jpg")));
+    makeAllButtonsTransparent(this.getContentPane());
+    aktualizujDateICzas();
+    ustawEkranStartowy(); // 🔹 wywołanie nowej metody
+}
 
     private void makeAllButtonsTransparent(Container container) {
         for (Component c : container.getComponents()) {
@@ -37,18 +38,45 @@ public class ui extends javax.swing.JFrame {
         }
     }
     
-    private void aktualizujDateICzas() {
+private void aktualizujDateICzas() {
     SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
 
-    // Timer aktualizujący co 1 sekundę
+    jTextArea1.setEditable(false);
+    jTextArea1.setFocusable(false);
+    jTextArea1.setOpaque(false);
+    jTextArea1.setLineWrap(true);
+    jTextArea1.setWrapStyleWord(true);
+    jTextArea1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 24));
+    jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
+    jTextArea1.setAlignmentX(CENTER_ALIGNMENT);
+
+    // 🔹 Timer aktualizujący datę i godzinę co sekundę
     Timer timer = new Timer(1000, e -> {
         String dataICzas = sdf.format(new Date());
-        jTextArea1.setText(dataICzas);
+        // 🔹 Wyświetlamy wszystko w jednym komponencie:
+        jTextArea1.setText(
+            dataICzas + "\n" +               // pierwsza linia – data i godzina
+            "Podaj numer rejestracyjny\n" +  // druga linia – instrukcja
+            "AB12345"                         // trzecia linia – przykładowa rejestracja
+        );
     });
     timer.start();
 }
 
+private void ustawEkranStartowy() {
 
+    jTextArea1.setText("Podaj numer rejestracyjny");
+    jTextArea1.setEditable(false);
+    jTextArea1.setAlignmentX(CENTER_ALIGNMENT);
+    jTextArea1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+    jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
+
+    jTextArea1.setText("AB12345");
+    jTextArea1.setEditable(false);
+    jTextArea1.setAlignmentX(CENTER_ALIGNMENT);
+    jTextArea1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 16));
+    jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
+}
 
 
     @SuppressWarnings("unchecked")
