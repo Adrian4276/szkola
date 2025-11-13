@@ -21,7 +21,7 @@ public ui() {
     jLabel1.setIcon(new ImageIcon(getClass().getResource("/symulator_parkometru/icon.jpg")));
     makeAllButtonsTransparent(this.getContentPane());
     aktualizujDateICzas();
-    ustawEkranStartowy(); // 🔹 wywołanie nowej metody
+    ustawEkranStartowy(); 
 }
 
     private void makeAllButtonsTransparent(Container container) {
@@ -50,33 +50,44 @@ private void aktualizujDateICzas() {
     jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
     jTextArea1.setAlignmentX(CENTER_ALIGNMENT);
 
-    // 🔹 Timer aktualizujący datę i godzinę co sekundę
     Timer timer = new Timer(1000, e -> {
         String dataICzas = sdf.format(new Date());
-        // 🔹 Wyświetlamy wszystko w jednym komponencie:
-        jTextArea1.setText(
-            dataICzas + "\n" +               // pierwsza linia – data i godzina
-            "Podaj numer rejestracyjny\n" +  // druga linia – instrukcja
-            "AB12345"                         // trzecia linia – przykładowa rejestracja
-        );
+
+        String aktualnyTekst = jTextArea1.getText();
+        String[] linie = aktualnyTekst.split("\n", 2);
+        String reszta = linie.length > 1 ? linie[1] : "Podaj numer rejestracyjny\n";
+
+        jTextArea1.setText(dataICzas + "\n" + reszta);
     });
     timer.start();
 }
 
+
 private void ustawEkranStartowy() {
-
-    jTextArea1.setText("Podaj numer rejestracyjny");
+    jTextArea1.setText("dd.MM.yyyy HH:mm:ss\n"); 
     jTextArea1.setEditable(false);
-    jTextArea1.setAlignmentX(CENTER_ALIGNMENT);
-    jTextArea1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+    jTextArea1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 26));
     jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
-
-    jTextArea1.setText("AB12345");
-    jTextArea1.setEditable(false);
     jTextArea1.setAlignmentX(CENTER_ALIGNMENT);
-    jTextArea1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 16));
-    jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
 }
+
+private void dodajZnakDoRejestracji(String znak) {
+    String aktualny = jTextArea1.getText();
+
+    String[] linie = aktualny.split("\n", 2);
+    String data = linie.length > 0 ? linie[0] : "";
+    String rejestracja = linie.length > 1 ? linie[1] : "";
+
+    if (rejestracja.length() < 8) {
+        rejestracja += znak;
+    }
+
+    jTextArea1.setText(data + "\n" + rejestracja);
+}
+
+
+
+
 
 
     @SuppressWarnings("unchecked")
@@ -559,43 +570,54 @@ private void ustawEkranStartowy() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("0");
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("2");
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("3");
+
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("4");
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("5");
+
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("6");
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("1");
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("7");
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("8");
+
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+dodajZnakDoRejestracji("9");
+
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
