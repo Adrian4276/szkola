@@ -14,6 +14,10 @@ import javax.swing.Timer;
  * @author Admin
  */
 public class ui extends javax.swing.JFrame {
+    private double czasPostoju = 1.0;
+    private boolean zatwierdzono = false;
+
+
 
 public ui() {
     initComponents();
@@ -21,7 +25,7 @@ public ui() {
     jLabel1.setIcon(new ImageIcon(getClass().getResource("/symulator_parkometru/icon.jpg")));
     makeAllButtonsTransparent(this.getContentPane());
     aktualizujDateICzas();
-    ustawEkranStartowy(); 
+    ustawEkranStartowy();
 }
 
     private void makeAllButtonsTransparent(Container container) {
@@ -72,6 +76,23 @@ private void dodajZnakDoRejestracji(String znak) {
 
     jTextArea1.setText(data + "\nPodaj tablicę rejestracyjną:\n" + rejestracja);
 }
+
+private void aktualizujCzasPostoju() {
+    String tekst = jTextArea1.getText();
+    String[] linie = tekst.split("\n");
+
+    java.util.List<String> lista = new java.util.ArrayList<>();
+    for (String l : linie) lista.add(l);
+
+    while (lista.size() < 4) lista.add("");
+
+    lista.set(3, "Czas postoju: " + czasPostoju + " godziny");
+
+    jTextArea1.setText(String.join("\n", lista));
+}
+
+
+
 
 
 
@@ -714,11 +735,15 @@ dodajZnakDoRejestracji("Z");
     }//GEN-LAST:event_jButton40ActionPerformed
 
     private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
-        // TODO add your handling code here:
+        if (czasPostoju > 0.5) {
+        czasPostoju -= 0.5;
+    }
+    aktualizujCzasPostoju();
     }//GEN-LAST:event_jButton41ActionPerformed
 
     private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
-        // TODO add your handling code here:
+    czasPostoju += 0.5;
+    aktualizujCzasPostoju();
     }//GEN-LAST:event_jButton42ActionPerformed
 
     private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
@@ -726,11 +751,17 @@ dodajZnakDoRejestracji("Z");
     }//GEN-LAST:event_jButton43ActionPerformed
 
     private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
+    if (zatwierdzono) return;
+    zatwierdzono = true;
+
     String[] linie = jTextArea1.getText().split("\n", 3);
+    String data = linie.length > 0 ? linie[0] : "";
+    String komunikat = "Podaj tablicę rejestracyjną:";
     String rejestracja = linie.length > 2 ? linie[2] : "";
-    if (!rejestracja.isEmpty()) {
-        jTextArea1.append("\nCzas postoju: 1 godzina");
-    }
+
+    String nowyTekst = data + "\n" + komunikat + "\n" + rejestracja + "\nCzas postoju: " + czasPostoju + " godziny";
+    
+    jTextArea1.setText(nowyTekst);
     }//GEN-LAST:event_jButton44ActionPerformed
 
     private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
